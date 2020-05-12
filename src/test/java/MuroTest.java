@@ -1,3 +1,5 @@
+
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -23,7 +25,8 @@ public class MuroTest {
         muro.addEntradaTexto(entrada03);
         muro.addEntradaFoto(entrada04);
 
+        String comparacion = ("Usuario: Nacho\nLikes: 0\nRecién llegado de mis vacaciones en Hawai!\nEscrito hace 10 segundos\nNo hay comentarios\n\n\nUsuario: Begoña\nLikes: 0\nEstá lloviendo ahí fuera...\nEscrito hace 10 segundos\nNo hay comentarios\n\n\nUsuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nEscrito hace 10 segundos\nNo hay comentarios\n\n\nUsuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nEscrito hace 10 segundos\nNo hay comentarios\n\n\n");
+        assertEquals(comparacion, muro.toString());
         System.out.println(muro);
     }
-
 }
