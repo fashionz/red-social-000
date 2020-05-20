@@ -37,6 +37,13 @@ public class EntradaTexto extends Entrada
         return mensaje;
     }
 
+    public void mostrarAutorYMensaje() {
+        String aDevolver = "";
+        aDevolver = aDevolver + "Autor: " + getUsuario() + "\n";
+        aDevolver = aDevolver + "Mensaje: " + mensaje + "\n";
+        System.out.println(aDevolver);
+    }
+
     /**
      * Devuelve una cadena con toda la informacion de la entrada.
      * @return Devuelve una cadena con toda la informacion de la entrada.
