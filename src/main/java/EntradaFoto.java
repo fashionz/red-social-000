@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto extends Entrada
+public class EntradaFoto extends EntradaComentarios
 {
     // URL de la imagen.
     private String urlImagen;
@@ -61,19 +61,7 @@ public class EntradaFoto extends Entrada
         aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
         aDevolver += "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
-
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        long numeroSegundos = 10;
-        aDevolver += "Escrito hace ";
-
-        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
-        if (numeroSegundos > 59) {
-            aDevolver += numeroSegundos / 60 + " minutos";
-        }
-        else {
-            aDevolver += numeroSegundos + " segundos";
-        }
-        aDevolver += "\n";
+        aDevolver += getTiempoPublicacion() + "\n";
 
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (getComentarios().size() == 0) {
@@ -85,7 +73,6 @@ public class EntradaFoto extends Entrada
                 aDevolver += comentarioActual + "\n";
             }
         }
-
         return aDevolver;
     }
 }
