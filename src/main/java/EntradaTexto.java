@@ -66,7 +66,6 @@ public class EntradaTexto extends EntradaComentarios
                 aDevolver += comentarioActual + "\n";
             }
         }
-
         return aDevolver;
     }
 }
