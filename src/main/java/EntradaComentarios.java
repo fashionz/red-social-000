@@ -15,4 +15,20 @@ public class EntradaComentarios extends Entrada {
     public ArrayList<String> getComentarios() {
         return comentarios;
     }
+
+    @Override
+    public String toString() {
+        String aDevolver = "";
+        aDevolver = super.toString();
+        if(getComentarios().isEmpty()) {
+            aDevolver = aDevolver + "No hay comentarios\n";
+        }
+        else {
+            aDevolver = aDevolver + "Comentarios: ";
+            for (String texto : getComentarios()) {
+                aDevolver = aDevolver + "- " + texto + "\n";
+            }
+        }
+        return aDevolver;
+    }
 }
