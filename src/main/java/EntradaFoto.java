@@ -62,4 +62,10 @@ public class EntradaFoto extends EntradaComentarios
         aDevolver += "Titulo: " + titulo + "\n";
         return aDevolver;
     }
+
+    @Override
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(urlImagen);
+        System.out.println(titulo);
+    }
 }

@@ -29,6 +29,16 @@ public class Muro {
     }
 
     /**
+     * Muestra los detalles de todas las entradas añadidas
+     * al muro en el orden en el que fueron añadidas.
+     */
+    public void mostrarDetallesTodasLasEntradas() {
+        for (Entrada entrada : entradas) {
+            entrada.mostrarDetallesPorPantalla();
+        }
+    }
+
+    /**
      * Devuelve una cadena con toda la informacion del muro.
      * @return Devuelve una cadena con toda la informacion del muro.
      */

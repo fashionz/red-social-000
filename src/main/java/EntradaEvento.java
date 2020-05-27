@@ -16,4 +16,9 @@ public class EntradaEvento extends Entrada{
         aDevolver += evento + "\n";
         return aDevolver;
     }
+
+    @Override
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(evento);
+    }
 }

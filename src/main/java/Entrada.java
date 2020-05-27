@@ -32,6 +32,10 @@ public class Entrada {
         return cantidadMeGusta;
     }
 
+    public void mostrarDetallesPorPantalla() {
+        System.out.println("");
+    }
+
     @Override
     public String toString() {
         String aDevolver = "";

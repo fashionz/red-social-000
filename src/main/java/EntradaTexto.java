@@ -55,4 +55,10 @@ public class EntradaTexto extends EntradaComentarios
         aDevolver += mensaje + "\n";
         return aDevolver;
     }
+
+    @Override
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(mensaje);
+    }
+
 }
