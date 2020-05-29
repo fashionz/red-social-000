@@ -38,6 +38,19 @@ public class Muro {
         }
     }
 
+    public ArrayList getUrlFotos() {
+        ArrayList<String> listaUrls = new ArrayList<>();
+        for(Entrada entrada : entradas) {
+            if(entrada instanceof  EntradaFoto) {
+                listaUrls.add(((EntradaFoto)entrada).getUrlImagen());
+            }
+        }
+        for(String url : listaUrls) {
+            System.out.println(url);
+        }
+        return listaUrls;
+    }
+
     /**
      * Devuelve una cadena con toda la informacion del muro.
      * @return Devuelve una cadena con toda la informacion del muro.
